@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">ShopEasy</div>
+        
+        <!-- Bonus: Search Bar -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#products">Products</a></li>
+            <li><a href="#cart-section" class="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Products Section -->
+    <main class="container" id="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="productGrid">
+            
+            <!-- Product 1 -->
+            <div class="product-card" data-name="Wireless Headphones">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p class="price">₹1,999</p>
+                <button onclick="addToCart('Wireless Headphones', 1999)">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-name="Smart Watch">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="price">₹2,499</p>
+                <button onclick="addToCart('Smart Watch', 2499)">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-name="Running Shoes">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Running Shoes">
+                <h3>Running Shoes</h3>
+                <p class="price">₹1,799</p>
+                <button onclick="addToCart('Running Shoes', 1799)">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-name="Laptop Backpack">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400" alt="Laptop Backpack">
+                <h3>Laptop Backpack</h3>
+                <p class="price">₹1,299</p>
+                <button onclick="addToCart('Laptop Backpack', 1299)">Add to Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-name="Mechanical Keyboard">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400" alt="Mechanical Keyboard">
+                <h3>Mechanical Keyboard</h3>
+                <p class="price">₹3,199</p>
+                <button onclick="addToCart('Mechanical Keyboard', 3199)">Add to Cart</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-name="Sunglasses">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400" alt="Sunglasses">
+                <h3>Sunglasses</h3>
+                <p class="price">₹899</p>
+                <button onclick="addToCart('Sunglasses', 899)">Add to Cart</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bonus: Cart Details & Total Price Section -->
+    <section class="cart-container" id="cart-section">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items">
+            <p class="empty-msg">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-summary">
+            <h3>Total Price: ₹<span id="total-price">0</span></h3>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
